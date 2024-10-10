@@ -1,6 +1,3 @@
-Here's an example of a `README.md` file for your project, tailored for use on a GitHub repository:
-
-```markdown
 # Emoji Feedback Logging with Nginx
 
 This project captures user feedback through emoji reactions on a webpage and logs it using Nginx. Users can click on emoji buttons (e.g., 😞, 😐, 😊) to provide feedback, which is then sent as a `GET` request to an Nginx server endpoint. Nginx logs the feedback data in a structured JSON format for further analysis.
