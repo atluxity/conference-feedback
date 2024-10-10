@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>How did you like that presentation you just watched?</h1>
+    <div id="feedback">
+        <button onclick="logFeedback('😞')">😞</button>
+        <button onclick="logFeedback('😐')">😐</button>
+        <button onclick="logFeedback('😊')">😊</button>
+    </div>
+    <div id="logo">
+        <img src="logo.png" alt="Logo">
+    </div>
+   <script>
+function logFeedback(emoji) {
+    const timestamp = new Date().toISOString();
+
+    // Map each emoji to an ASCII value.
+    const emojiMap = {
+        '😞': '58',  // ASCII value for 'sad'
+        '😐': '45',  // ASCII value for 'neutral'
+        '😊': '42'   // ASCII value for 'happy'
+    };
+
+    // Get the corresponding ASCII value.
+    const asciiValue = emojiMap[emoji];
+
+    // Construct the URL with query parameters
+    const url = `/log-feedback?emoji=${asciiValue}&timestamp=${encodeURIComponent(timestamp)}`;
+
+    // Send feedback using a GET request
+    fetch(url, { method: 'GET' })
+    .then(response => console.log(`Logged feedback: ${emoji}`))
+    .catch(error => console.error('Error logging feedback:', error));
+
+    createFloatingEmoji(emoji);
+}
+
+        function createFloatingEmoji(emoji) {
+            const floatingEmoji = document.createElement('div');
+            floatingEmoji.className = 'floating-emoji';
+            floatingEmoji.textContent = emoji;
+            document.body.appendChild(floatingEmoji);
+
+            // Remove the floating emoji after the animation ends
+            floatingEmoji.addEventListener('animationend', () => {
+                floatingEmoji.remove();
+            });
+        }
+    </script>
+
+    </body>
+</html>
+
