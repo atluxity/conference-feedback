@@ -1,4 +1,5 @@
-# Emoji Feedback Logging with Nginx
+# Emojirate by Atluxity
+# Simple and Scalable Emoji Feedback Logging with Nginx for Conferences
 
 This project captures user feedback through emoji reactions on a webpage and logs it using Nginx. Users can click on emoji buttons (e.g., 😞, 😐, 😊) to provide feedback, which is then sent as a `GET` request to an Nginx server endpoint. Nginx logs the feedback data in a structured JSON format for further analysis.
 
@@ -79,17 +80,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - [Nginx](https://nginx.org/) for their powerful web server capabilities.
 - [MDN Web Docs](https://developer.mozilla.org/) for documentation on web technologies.
 
-```
-
-### Explanation of the README Structure:
-- **Overview**: Explains the purpose of the project.
-- **Features**: Lists what the project does.
-- **Prerequisites**: Specifies necessary software.
-- **Installation**: Provides step-by-step instructions for setting up the project.
-- **Usage**: Describes how to use the project, including accessing the web page and reading the logs.
-- **Mapping Emoji to Descriptions**: Details how to interpret the data in the logs.
-- **Customization**: Highlights how to adjust the project to fit specific needs.
-- **Contributing**: Invites collaboration.
-- **License**: Provides licensing information.
-
-Feel free to copy this into a `README.md` file for your repository and adjust any sections as needed! Let me know if you need more help.
+``` for your repository and adjust any sections as needed! Let me know if you need more help.
