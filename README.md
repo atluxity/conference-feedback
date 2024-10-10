@@ -17,8 +17,8 @@ This project captures user feedback through emoji reactions on a webpage and log
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/emoji-feedback-nginx.git
-   cd emoji-feedback-nginx
+   git clone https://github.com/atluxity/emojirate.git
+   cd emojirate
    ```
 
 2. **Configure Nginx**:
@@ -57,6 +57,7 @@ This project captures user feedback through emoji reactions on a webpage and log
    { "emoji": "45", "time": "2024-10-10T22:44:09+02:00" }
    { "emoji": "58", "time": "2024-10-10T22:44:10+02:00" }
    ```
+   Use the provided count_emojis.py
 
 ## Mapping Emoji to Descriptions
 The emoji feedback is sent using ASCII representations:
